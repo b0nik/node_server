@@ -1,8 +1,7 @@
-class Models{
+class Model{
     constructor(url){
         this.cache=[];
         this.url=url ;
-        var self=this;
 
         (()=>{
             app.fs.readFile(this.url, 'utf8',(err, data)=>{
@@ -17,6 +16,18 @@ class Models{
             resolve(this.cache)
         })
     }
+    add(obj,cb){
+        this.cache.push(obj);
+        return new Promise((resolve,reject)=>{
+            app.fs.writeFile(this.url, JSON.stringify(this.cache), (err)=> {
+                if (err) {
+                    reject(err)
+                }else{
+                    resolve(null)
+                }
+            });
+        });
+    }
 }
 
-module.exports=Models;
+module.exports=Model;

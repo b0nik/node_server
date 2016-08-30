@@ -6,5 +6,8 @@ module.exports=(client, par)=>{
     });
     let ip = req.connection.remoteAddress;
     return `<h1>Welcome</h1>Your IP: ${ip}
-            <pre>${JSON.stringify(app.cookies)}</pre>`
+            <pre>${JSON.stringify(app.cookies)}</pre>
+            <a href="/user">show all users</a><br/>
+            <a href="adduser">add user</a>
+`
 };

@@ -1,0 +1,23 @@
+{
+  "name": "node_server",
+  "version": "1.0.0",
+  "description": "single server",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b0nik/node_server.git"
+  },
+  "author": "b0nik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/b0nik/node_server/issues"
+  },
+  "homepage": "https://github.com/b0nik/node_server#readme",
+  "dependencies": {
+    "ejs": "^2.5.1"
+  }
+}

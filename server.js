@@ -7,6 +7,7 @@ app.cookie=require('./libs/cookiesParse');
 app.routes=require('./routing/routesAction');
 const Cache=require('./libs/cache');
 app.cache=new Cache();
+app.ejs=require('ejs');
 
 const server=app.http.createServer();
 
